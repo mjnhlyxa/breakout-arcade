@@ -1,0 +1,17 @@
+{
+  "name": "breakout-arcade",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/web",
+    "apps/api"
+  ],
+  "scripts": {
+    "dev": "bun --cwd apps/web dev",
+    "dev:api": "bun --cwd apps/api uvicorn main:app --reload",
+    "build": "bun run build:web && bun run build:api",
+    "build:web": "cd apps/web && bun --bun next build",
+    "build:api": "cd apps/api && pip install -r requirements.txt",
+    "test": "echo 'Tests run separately via game-test skill'"
+  }
+}

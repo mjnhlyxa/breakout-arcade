@@ -1,0 +1,10 @@
+{
+  "framework": "python",
+  "buildCommand": "pip install -r requirements.txt",
+  "devCommand": "uvicorn main:app --reload --port 8000",
+  "installCommand": "pip install -r requirements.txt",
+  "port": 8000,
+  "routes": [
+    { "src": "/(.*)", "dest": "main:app" }
+  ]
+}
