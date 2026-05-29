@@ -158,7 +158,7 @@ export function updateGame(state: GameState, deltaTime: number): GameState {
   let bricks = state.bricks;
   let score = state.score;
   let lives = state.lives;
-  let status = state.status;
+  let status: GameState['status'] = state.status;
 
   // Update ball position
   ball = updateBall(ball, state.level);

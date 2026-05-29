@@ -4,7 +4,8 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
-import { getLeaderboard, getPlayerBest, getPlayerId, type LeaderboardEntry, type PlayerBest } from '@/lib/api';
+import { getLeaderboard, getPlayerBest, type LeaderboardEntry, type PlayerBest } from '@/lib/api';
+import { getPlayerId } from '@/lib/player';
 
 export default function LeaderboardPage() {
   const router = useRouter();
